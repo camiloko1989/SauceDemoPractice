@@ -4,7 +4,7 @@
   "description": "Project to practice Test Automation with Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "npx codeceptjs run --features --verbose"
+    "test": "npx codeceptjs run --features --verbose --plugins allure"
   },
   "author": "",
   "license": "ISC",

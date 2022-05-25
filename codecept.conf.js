@@ -38,7 +38,13 @@ exports.config = {
       },
       allure: {},
   
-      pauseOnFail: {}
+      pauseOnFail: {},
+
+      allure: {
+        enabled: true
+      }
+
+
     },
     stepTimeout: 0,
     stepTimeoutOverride: [{
