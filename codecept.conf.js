@@ -10,6 +10,7 @@ exports.config = {
     include: {
       I: './steps_file.js',
       loginPage: './pages/loginPage.js',
+      productPage: './pages/productPage.js',
     },
     mocha: {},
     bootstrap: null,
@@ -18,7 +19,7 @@ exports.config = {
     hooks: [],
     gherkin: {
       features: './features/*.feature',
-      steps: ['./steps_definitions/loginSteps.js']
+      steps: ['./steps_definitions/loginSteps.js', './steps_definitions/addingProductSteps.js']
     },
     plugins: {
       screenshotOnFail: {
