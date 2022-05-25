@@ -1,0 +1,15 @@
+{
+  "name": "sauce-demo",
+  "version": "1.0.0",
+  "description": "Project to practice Test Automation with Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx codeceptjs run --features --verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeceptjs": "^3.3.3",
+    "puppeteer": "^14.1.1"
+  }
+}
