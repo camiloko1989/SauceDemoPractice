@@ -31,13 +31,13 @@ class ProductPage{
         
     }
 
-    validateCart(){
+    /*validateCart(){
         I.waitForElement(this.cart);
         I.click(this.cart);
         I.amOnPage("cart.html");
         I.waitForElement(this.removeButton)
         I.saveScreenshot("itemAdded.png")
-    }
+    }*/
 
 }
 

@@ -1,7 +1,7 @@
 const {login} = require("../pages/loginPage.js");
 const {product} = require("../pages/productPage.js");
 
-const {I, loginPage, productPage} = inject();
+const {I, loginPage, productPage, cartPage} = inject();
 
 Given('I am on the product page', (email, password) =>{
 
@@ -19,5 +19,20 @@ When('I select the first item from the list', () => {
 })
 
 Then('the item is sent to the shopping cart', () => {
-    productPage.validateCart();
+
+    cartPage.validateCartPage();
+    cartPage.validateItemsInCart();
+
+})
+
+When('I remove the item from the shopping cart', ()=>{
+
+     cartPage.removeItem();
+
+})
+
+Then('The item is no longer in the shopping cart', ()=>{
+
+    cartPage.validateNoItemsinCart();
+
 })
