@@ -1,0 +1,682 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1653947989047' stop='1653948007811'>
+    <name>Buying products</name>
+    <title>Buying products</title>
+    <test-cases>
+        <test-case start='1653947989050' status='passed' stop='1653947993134'>
+            <name>Add an item to the shopping cart</name>
+            <title>Add an item to the shopping cart</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653947989989' status='passed' stop='1653947992130'>
+                    <name>Given The user is on the product page </name>
+                    <title>Given The user is on the product page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947989989' status='passed' stop='1653947990434'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947989989' status='passed' stop='1653947990392'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947990392' status='passed' stop='1653947990403'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947990404' status='passed' stop='1653947990418'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947990418' status='passed' stop='1653947990434'>
+                                    <name>I wait for element "#password"</name>
+                                    <title>I wait for element "#password"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947990434' status='passed' stop='1653947991637'>
+                            <name>loginPage: login "standard_user", "secret_sauce"</name>
+                            <title>loginPage: login "standard_user", "secret_sauce"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947990434' status='passed' stop='1653947990979'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947990980' status='passed' stop='1653947991440'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947991440' status='passed' stop='1653947991637'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947991637' status='passed' stop='1653947992130'>
+                            <name>productPage: validatePage </name>
+                            <title>productPage: validatePage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947991637' status='passed' stop='1653947992111'>
+                                    <name>I am on page "inventory.html"</name>
+                                    <title>I am on page "inventory.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947992111' status='passed' stop='1653947992120'>
+                                    <name>I wait for element "//*[text()='Products']"</name>
+                                    <title>I wait for element "//*[text()='Products']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947992130' status='passed' stop='1653947992807'>
+                    <name>When the user selects the first item on the list </name>
+                    <title>When the user selects the first item on the list </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947992130' status='passed' stop='1653947992650'>
+                            <name>productPage: selectFirstProduct </name>
+                            <title>productPage: selectFirstProduct </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947992130' status='passed' stop='1653947992147'>
+                                    <name>I wait for element "//*[@class='inventory_item_label'][1]"</name>
+                                    <title>I wait for element "//*[@class='inventory_item_label'][1]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947992147' status='passed' stop='1653947992351'>
+                                    <name>I click "#item_4_title_link"</name>
+                                    <title>I click "#item_4_title_link"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947992351' status='passed' stop='1653947992357'>
+                                    <name>I wait for element "#back-to-products", 5</name>
+                                    <title>I wait for element "#back-to-products", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947992357' status='passed' stop='1653947992649'>
+                                    <name>I save screenshot "firstItem.png"</name>
+                                    <title>I save screenshot "firstItem.png"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947992650' status='passed' stop='1653947992807'>
+                            <name>productPage: addProductToCart </name>
+                            <title>productPage: addProductToCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947992650' status='passed' stop='1653947992658'>
+                                    <name>I wait for element "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947992658' status='passed' stop='1653947992807'>
+                                    <name>I click "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947992807' status='passed' stop='1653947993134'>
+                    <name>Then the item is sent to the shopping cart </name>
+                    <title>Then the item is sent to the shopping cart </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947992807' status='passed' stop='1653947993112'>
+                            <name>cartPage: validateCartPage </name>
+                            <title>cartPage: validateCartPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947992807' status='passed' stop='1653947993106'>
+                                    <name>I am on page "cart.html"</name>
+                                    <title>I am on page "cart.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947993106' status='passed' stop='1653947993112'>
+                                    <name>I wait for element "//*[text()='Your Cart']"</name>
+                                    <title>I wait for element "//*[text()='Your Cart']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947993112' status='passed' stop='1653947993134'>
+                            <name>cartPage: validateItemsInCart </name>
+                            <title>cartPage: validateItemsInCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947993112' status='passed' stop='1653947993123'>
+                                    <name>I wait for element "//*[@class='shopping_cart_badge']", 4</name>
+                                    <title>I wait for element "//*[@class='shopping_cart_badge']", 4</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947993123' status='passed' stop='1653947993134'>
+                                    <name>I wait for element "#remove-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#remove-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1653947993811' status='failed' stop='1653948002180'>
+            <name>Remove an item from the shopping cart</name>
+            <title>Remove an item from the shopping cart</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653947994765' status='passed' stop='1653947996722'>
+                    <name>Given The user is on the product page </name>
+                    <title>Given The user is on the product page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947994765' status='passed' stop='1653947995155'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947994765' status='passed' stop='1653947995131'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947995131' status='passed' stop='1653947995137'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947995137' status='passed' stop='1653947995149'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947995149' status='passed' stop='1653947995155'>
+                                    <name>I wait for element "#password"</name>
+                                    <title>I wait for element "#password"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947995155' status='passed' stop='1653947996236'>
+                            <name>loginPage: login "standard_user", "secret_sauce"</name>
+                            <title>loginPage: login "standard_user", "secret_sauce"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947995155' status='passed' stop='1653947995607'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947995607' status='passed' stop='1653947996023'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947996023' status='passed' stop='1653947996236'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947996236' status='passed' stop='1653947996722'>
+                            <name>productPage: validatePage </name>
+                            <title>productPage: validatePage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947996236' status='passed' stop='1653947996706'>
+                                    <name>I am on page "inventory.html"</name>
+                                    <title>I am on page "inventory.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947996706' status='passed' stop='1653947996715'>
+                                    <name>I wait for element "//*[text()='Products']"</name>
+                                    <title>I wait for element "//*[text()='Products']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947996722' status='passed' stop='1653947997397'>
+                    <name>When the user selects the first item on the list </name>
+                    <title>When the user selects the first item on the list </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947996722' status='passed' stop='1653947997218'>
+                            <name>productPage: selectFirstProduct </name>
+                            <title>productPage: selectFirstProduct </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947996722' status='passed' stop='1653947996731'>
+                                    <name>I wait for element "//*[@class='inventory_item_label'][1]"</name>
+                                    <title>I wait for element "//*[@class='inventory_item_label'][1]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947996731' status='passed' stop='1653947996918'>
+                                    <name>I click "#item_4_title_link"</name>
+                                    <title>I click "#item_4_title_link"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947996919' status='passed' stop='1653947996923'>
+                                    <name>I wait for element "#back-to-products", 5</name>
+                                    <title>I wait for element "#back-to-products", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947996923' status='passed' stop='1653947997218'>
+                                    <name>I save screenshot "firstItem.png"</name>
+                                    <title>I save screenshot "firstItem.png"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947997218' status='passed' stop='1653947997397'>
+                            <name>productPage: addProductToCart </name>
+                            <title>productPage: addProductToCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947997218' status='passed' stop='1653947997234'>
+                                    <name>I wait for element "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947997234' status='passed' stop='1653947997397'>
+                                    <name>I click "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947997397' status='passed' stop='1653947997718'>
+                    <name>Then the item is no longer in the shopping cart </name>
+                    <title>Then the item is no longer in the shopping cart </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947997397' status='passed' stop='1653947997701'>
+                            <name>cartPage: validateCartPage </name>
+                            <title>cartPage: validateCartPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947997397' status='passed' stop='1653947997695'>
+                                    <name>I am on page "cart.html"</name>
+                                    <title>I am on page "cart.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947997695' status='passed' stop='1653947997701'>
+                                    <name>I wait for element "//*[text()='Your Cart']"</name>
+                                    <title>I wait for element "//*[text()='Your Cart']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947997701' status='passed' stop='1653947997718'>
+                            <name>cartPage: validateItemsInCart </name>
+                            <title>cartPage: validateItemsInCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947997701' status='passed' stop='1653947997711'>
+                                    <name>I wait for element "//*[@class='shopping_cart_badge']", 4</name>
+                                    <title>I wait for element "//*[@class='shopping_cart_badge']", 4</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947997711' status='passed' stop='1653947997718'>
+                                    <name>I wait for element "#remove-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#remove-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947997718' status='passed' stop='1653947997886'>
+                    <name>And the user removes the item from the shopping cart </name>
+                    <title>And the user removes the item from the shopping cart </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947997718' status='passed' stop='1653947997886'>
+                            <name>cartPage: removeItem </name>
+                            <title>cartPage: removeItem </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947997718' status='passed' stop='1653947997726'>
+                                    <name>I wait for element "#remove-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#remove-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947997727' status='passed' stop='1653947997886'>
+                                    <name>I click "#remove-sauce-labs-backpack"</name>
+                                    <title>I click "#remove-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653947997886' status='failed' stop='1653948002180'>
+                    <name>Then the item is no longer in the shopping cart </name>
+                    <title>Then the item is no longer in the shopping cart </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653947997886' status='passed' stop='1653947998165'>
+                            <name>cartPage: validateCartPage </name>
+                            <title>cartPage: validateCartPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947997887' status='passed' stop='1653947998157'>
+                                    <name>I am on page "cart.html"</name>
+                                    <title>I am on page "cart.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653947998158' status='passed' stop='1653947998165'>
+                                    <name>I wait for element "//*[text()='Your Cart']"</name>
+                                    <title>I wait for element "//*[text()='Your Cart']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653947998165' status='failed' stop='1653948002180'>
+                            <name>cartPage: validateItemsInCart </name>
+                            <title>cartPage: validateItemsInCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653947998165' status='failed' stop='1653948002178'>
+                                    <name>I wait for element "//*[@class='shopping_cart_badge']", 4</name>
+                                    <title>I wait for element "//*[@class='shopping_cart_badge']", 4</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='72cf042e-ff4d-4797-9256-f6a3d66d158c-attachment.png' type='image/png' size='67672'/>
+            </attachments>
+            <failure>
+                <message>element (//*[@class='shopping_cart_badge']) still not present on page after 4 sec
+                waiting for XPath `//*[@class='shopping_cart_badge']` failed: timeout 4000ms exceeded</message>
+                <stack-trace>Error: element (//*[@class='shopping_cart_badge']) still not present on page after 4 sec
+                waiting for XPath `//*[@class='shopping_cart_badge']` failed: timeout 4000ms exceeded
+                    at C:\Users\camil\OneDrive\Documents\Platzi\Puppeteer\Sauce_Demo\node_modules\codeceptjs\lib\helper\Puppeteer.js:1976:13</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1653948003002' status='failed' stop='1653948007084'>
+            <name>Buy an item</name>
+            <title>Buy an item</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653948003888' status='passed' stop='1653948005888'>
+                    <name>Given The user is on the product page </name>
+                    <title>Given The user is on the product page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653948003888' status='passed' stop='1653948004313'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948003888' status='passed' stop='1653948004281'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948004282' status='passed' stop='1653948004290'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948004290' status='passed' stop='1653948004302'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948004302' status='passed' stop='1653948004313'>
+                                    <name>I wait for element "#password"</name>
+                                    <title>I wait for element "#password"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653948004313' status='passed' stop='1653948005413'>
+                            <name>loginPage: login "standard_user", "secret_sauce"</name>
+                            <title>loginPage: login "standard_user", "secret_sauce"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948004313' status='passed' stop='1653948004778'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948004778' status='passed' stop='1653948005206'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948005206' status='passed' stop='1653948005413'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653948005413' status='passed' stop='1653948005888'>
+                            <name>productPage: validatePage </name>
+                            <title>productPage: validatePage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948005413' status='passed' stop='1653948005875'>
+                                    <name>I am on page "inventory.html"</name>
+                                    <title>I am on page "inventory.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948005875' status='passed' stop='1653948005881'>
+                                    <name>I wait for element "//*[text()='Products']"</name>
+                                    <title>I wait for element "//*[text()='Products']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653948005888' status='passed' stop='1653948006931'>
+                    <name>When the user adds the first item to the shopping cart </name>
+                    <title>When the user adds the first item to the shopping cart </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653948005888' status='passed' stop='1653948006382'>
+                            <name>productPage: selectFirstProduct </name>
+                            <title>productPage: selectFirstProduct </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948005888' status='passed' stop='1653948005903'>
+                                    <name>I wait for element "//*[@class='inventory_item_label'][1]"</name>
+                                    <title>I wait for element "//*[@class='inventory_item_label'][1]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948005904' status='passed' stop='1653948006106'>
+                                    <name>I click "#item_4_title_link"</name>
+                                    <title>I click "#item_4_title_link"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948006106' status='passed' stop='1653948006112'>
+                                    <name>I wait for element "#back-to-products", 5</name>
+                                    <title>I wait for element "#back-to-products", 5</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948006112' status='passed' stop='1653948006381'>
+                                    <name>I save screenshot "firstItem.png"</name>
+                                    <title>I save screenshot "firstItem.png"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653948006382' status='passed' stop='1653948006552'>
+                            <name>productPage: addProductToCart </name>
+                            <title>productPage: addProductToCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948006382' status='passed' stop='1653948006396'>
+                                    <name>I wait for element "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948006397' status='passed' stop='1653948006552'>
+                                    <name>I click "#add-to-cart-sauce-labs-backpack"</name>
+                                    <title>I click "#add-to-cart-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653948006552' status='passed' stop='1653948006906'>
+                            <name>cartPage: validateCartPage </name>
+                            <title>cartPage: validateCartPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948006552' status='passed' stop='1653948006897'>
+                                    <name>I am on page "cart.html"</name>
+                                    <title>I am on page "cart.html"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948006898' status='passed' stop='1653948006906'>
+                                    <name>I wait for element "//*[text()='Your Cart']"</name>
+                                    <title>I wait for element "//*[text()='Your Cart']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                        <step start='1653948006906' status='passed' stop='1653948006931'>
+                            <name>cartPage: validateItemsInCart </name>
+                            <title>cartPage: validateItemsInCart </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948006906' status='passed' stop='1653948006919'>
+                                    <name>I wait for element "//*[@class='shopping_cart_badge']", 4</name>
+                                    <title>I wait for element "//*[@class='shopping_cart_badge']", 4</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653948006919' status='passed' stop='1653948006931'>
+                                    <name>I wait for element "#remove-sauce-labs-backpack"</name>
+                                    <title>I wait for element "#remove-sauce-labs-backpack"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653948006931' status='failed' stop='1653948007084'>
+                    <name>And completes the process to buy the item </name>
+                    <title>And completes the process to buy the item </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653948006931' status='failed' stop='1653948007084'>
+                            <name>cartPage: goToCheckout </name>
+                            <title>cartPage: goToCheckout </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653948006931' status='passed' stop='1653948007083'>
+                                    <name>I click "#checkout"</name>
+                                    <title>I click "#checkout"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='f4c31b04-09ec-435f-882a-05a958254cea-attachment.png' type='image/png' size='35957'/>
+            </attachments>
+            <failure>
+                <message>checkOutPage.validateCheckOutPage is not a function</message>
+                <stack-trace>TypeError: checkOutPage.validateCheckOutPage is not a function
+                    at C:\Users\camil\OneDrive\Documents\Platzi\Puppeteer\Sauce_Demo\steps_definitions\addingProductSteps.js:47:18
+                    at runSteps (C:\Users\camil\OneDrive\Documents\Platzi\Puppeteer\Sauce_Demo\node_modules\codeceptjs\lib\interfaces\gherkin.js:62:15)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

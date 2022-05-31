@@ -8,6 +8,7 @@ class CartPage{
         this.removeButton = "#remove-sauce-labs-backpack";
         this.checkOut = "#checkout";
         this.itemsInCart = "//*[@class='shopping_cart_badge']"
+        this.checkOutTitle = "//*[@class='title' and contains(text(), 'Information')]";
     }
 
     validateCartPage(){
@@ -16,7 +17,7 @@ class CartPage{
     }
 
     validateItemsInCart(){
-        I.waitForElement(this.itemsInCart);
+        I.waitForElement(this.itemsInCart, 4);
         I.waitForElement(this.removeButton);
     }
 
@@ -28,6 +29,11 @@ class CartPage{
 
     validateNoItemsinCart(){
         I.dontSeeElement(this.itemsInCart);
+    }
+
+    goToCheckout(){
+        I.click(this.checkOut);
+        I.waitForElement(this.checkOutTitle);
     }
 }
 

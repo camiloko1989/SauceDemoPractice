@@ -1,0 +1,267 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1653957388874' stop='1653957437922'>
+    <name>Loggin into the page</name>
+    <title>Loggin into the page</title>
+    <test-cases>
+        <test-case start='1653957388876' status='failed' stop='1653957424432'>
+            <name>Loggin into the app with valid credentials</name>
+            <title>Loggin into the app with valid credentials</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653957389636' status='failed' stop='1653957424432'>
+                    <name>Given The user is on the main page </name>
+                    <title>Given The user is on the main page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957389636' status='failed' stop='1653957424432'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957389636' status='passed' stop='1653957424219'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957424220' status='passed' stop='1653957424426'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957424426' status='failed' stop='1653957424428'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Cannot read properties of null (reading 'waitForSelector')</message>
+                <stack-trace>TypeError: Cannot read properties of null (reading 'waitForSelector')
+                    at Puppeteer.waitForElement (C:\Users\camil\OneDrive\Documents\Platzi\Puppeteer\Sauce_Demo\node_modules\codeceptjs\lib\helper\Puppeteer.js:1971:24)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1653957424773' status='failed' stop='1653957430205'>
+            <name>Loggin into the app with locked user</name>
+            <title>Loggin into the app with locked user</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653957425500' status='passed' stop='1653957426459'>
+                    <name>Given The user is on the main page </name>
+                    <title>Given The user is on the main page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957425500' status='passed' stop='1653957426459'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957425500' status='passed' stop='1653957425839'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957425839' status='passed' stop='1653957426052'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957426053' status='passed' stop='1653957426297'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957426298' status='passed' stop='1653957426458'>
+                                    <name>I wait for element "#password"</name>
+                                    <title>I wait for element "#password"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653957426459' status='passed' stop='1653957429191'>
+                    <name>When The user fills the form with locked Username and valid Password </name>
+                    <title>When The user fills the form with locked Username and valid Password </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957426459' status='passed' stop='1653957429191'>
+                            <name>loginPage: login "locked_out_user", "secret_sauce"</name>
+                            <title>loginPage: login "locked_out_user", "secret_sauce"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957426459' status='passed' stop='1653957427059'>
+                                    <name>I fill field "#user-name", "locked_out_user"</name>
+                                    <title>I fill field "#user-name", "locked_out_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957427060' status='passed' stop='1653957427501'>
+                                    <name>I fill field "#password", "secret_sauce"</name>
+                                    <title>I fill field "#password", "secret_sauce"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957427501' status='passed' stop='1653957429191'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653957429191' status='failed' stop='1653957430205'>
+                    <name>Then The user sees a locked warning messsage </name>
+                    <title>Then The user sees a locked warning messsage </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957429191' status='failed' stop='1653957430205'>
+                            <name>loginPage: validateLockedUser </name>
+                            <title>loginPage: validateLockedUser </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957429191' status='failed' stop='1653957430204'>
+                                    <name>I wait for element "//*[contains(text(), 'locked')]"</name>
+                                    <title>I wait for element "//*[contains(text(), 'locked')]"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Last Seen Screenshot' source='eac9608a-a1c3-44bc-a8b1-8a0b09fc5aa2-attachment.png' type='image/png' size='50355'/>
+            </attachments>
+            <failure>
+                <message>element (//*[contains(text(), 'locked')]) still not present on page after 1 sec
+                waiting for XPath `//*[contains(text(), 'locked')]` failed: timeout 1000ms exceeded</message>
+                <stack-trace>Error: element (//*[contains(text(), 'locked')]) still not present on page after 1 sec
+                waiting for XPath `//*[contains(text(), 'locked')]` failed: timeout 1000ms exceeded
+                    at C:\Users\camil\OneDrive\Documents\Platzi\Puppeteer\Sauce_Demo\node_modules\codeceptjs\lib\helper\Puppeteer.js:1976:13</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1653957432421' status='passed' stop='1653957437118'>
+            <name>Loggin into the app with wrong password</name>
+            <title>Loggin into the app with wrong password</title>
+            <labels/>
+            <parameters/>
+            <steps>
+                <step start='1653957433210' status='passed' stop='1653957434243'>
+                    <name>Given The user is on the main page </name>
+                    <title>Given The user is on the main page </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957433210' status='passed' stop='1653957434243'>
+                            <name>loginPage: validateLoginPage </name>
+                            <title>loginPage: validateLoginPage </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957433210' status='passed' stop='1653957433527'>
+                                    <name>I am on page </name>
+                                    <title>I am on page </title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957433527' status='passed' stop='1653957433566'>
+                                    <name>I wait for element "//*[@class='login_logo']"</name>
+                                    <title>I wait for element "//*[@class='login_logo']"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957433566' status='passed' stop='1653957434064'>
+                                    <name>I wait for element "#user-name"</name>
+                                    <title>I wait for element "#user-name"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957434064' status='passed' stop='1653957434243'>
+                                    <name>I wait for element "#password"</name>
+                                    <title>I wait for element "#password"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653957434243' status='passed' stop='1653957435324'>
+                    <name>When The user fills the form with valid Username and wrong Password </name>
+                    <title>When The user fills the form with valid Username and wrong Password </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957434243' status='passed' stop='1653957435324'>
+                            <name>loginPage: login "standard_user", "wrongPass"</name>
+                            <title>loginPage: login "standard_user", "wrongPass"</title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957434243' status='passed' stop='1653957434653'>
+                                    <name>I fill field "#user-name", "standard_user"</name>
+                                    <title>I fill field "#user-name", "standard_user"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957434653' status='passed' stop='1653957435075'>
+                                    <name>I fill field "#password", "wrongPass"</name>
+                                    <title>I fill field "#password", "wrongPass"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957435075' status='passed' stop='1653957435324'>
+                                    <name>I click "#login-button"</name>
+                                    <title>I click "#login-button"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1653957435324' status='passed' stop='1653957437118'>
+                    <name>Then The user sees a wrong warning messsage </name>
+                    <title>Then The user sees a wrong warning messsage </title>
+                    <attachments/>
+                    <steps>
+                        <step start='1653957435324' status='passed' stop='1653957437118'>
+                            <name>loginPage: validateWrongPass </name>
+                            <title>loginPage: validateWrongPass </title>
+                            <attachments/>
+                            <steps>
+                                <step start='1653957435324' status='passed' stop='1653957435586'>
+                                    <name>I wait for element "//*[contains(text(), 'do not match')]", 3</name>
+                                    <title>I wait for element "//*[contains(text(), 'do not match')]", 3</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                                <step start='1653957435586' status='passed' stop='1653957437118'>
+                                    <name>I save screenshot "loginWrong.png"</name>
+                                    <title>I save screenshot "loginWrong.png"</title>
+                                    <attachments/>
+                                    <steps/>
+                                </step>
+                            </steps>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

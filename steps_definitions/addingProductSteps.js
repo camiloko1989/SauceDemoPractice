@@ -1,38 +1,55 @@
 const {login} = require("../pages/loginPage.js");
-const {product} = require("../pages/productPage.js");
+const {product} = require("../pages/loginPage.js");
+const {cart} = require("../pages/cartPage.js");
+const {checkout} = require("../pages/checkOutPage.js");
+const {checkout2} = require("../pages/checkOutTwoPage.js");
 
-const {I, loginPage, productPage, cartPage} = inject();
 
-Given('I am on the product page', (email, password) =>{
+const {I, loginPage, productPage, cartPage, checkOutPage, checkOutTwoPage} = inject();
 
+
+Given('The user is on the product page', (email, password) =>{
     loginPage.validateLoginPage();
     loginPage.login("standard_user", "secret_sauce");
     productPage.validatePage();
-
 })
 
-When('I select the first item from the list', () => {
-
+When('the user selects the first item on the list', () =>{
     productPage.selectFirstProduct();
     productPage.addProductToCart();
-
 })
 
-Then('the item is sent to the shopping cart', () => {
 
+When('the item is sent to the shopping cart', () =>{
     cartPage.validateCartPage();
     cartPage.validateItemsInCart();
-
 })
 
-When('I remove the item from the shopping cart', ()=>{
-
-     cartPage.removeItem();
-
+When('the user removes the item from the shopping cart', () =>{
+    cartPage.removeItem();
 })
 
-Then('The item is no longer in the shopping cart', ()=>{
 
+Then('the item is no longer in the shopping cart', () =>{
+    cartPage.validateCartPage();
     cartPage.validateNoItemsinCart();
+})
 
+When('the user adds the first item to the shopping cart', () =>{
+    productPage.selectFirstProduct();
+    productPage.addProductToCart();
+    cartPage.validateCartPage();
+    cartPage.validateItemsInCart();
+})
+
+When('completes the process to buy the item', (firstName, lastName, zipCode) =>{
+    cartPage.goToCheckout();
+    checkOutPage.validateCheckOutPage();
+    checkOutPage.fillForm("Camilo", "Garcia", "111311");
+    checkOutTwoPage.validateCheckOutPageTwo();
+    checkOutTwoPage.buyItem();
+})
+
+Then('the confirmation screen is displayed', () =>{
+    checkOutTwoPage.validateCompleteBuy();
 })

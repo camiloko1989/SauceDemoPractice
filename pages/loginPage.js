@@ -2,7 +2,7 @@ const {I} = inject()
 
 class LoginPage{
 
-    constructor(){
+    constructor(){ //map login page elements
         this.loginLogo = "//*[@class='login_logo']";
         this.inputUsername = "#user-name";
         this.inputPassword = "#password";

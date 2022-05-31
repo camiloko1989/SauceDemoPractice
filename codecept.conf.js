@@ -12,6 +12,8 @@ exports.config = {
       loginPage: './pages/loginPage.js',
       productPage: './pages/productPage.js',
       cartPage: './pages/cartPage.js',
+      checkOutPage: './pages/checkOutPage.js',
+      checkOutTwoPage: './pages/checkOutTwoPage.js',
     },
     mocha: {},
     bootstrap: null,
