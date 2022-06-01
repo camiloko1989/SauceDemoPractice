@@ -53,3 +53,14 @@ When('completes the process to buy the item', (firstName, lastName, zipCode) =>{
 Then('the confirmation screen is displayed', () =>{
     checkOutTwoPage.validateCompleteBuy();
 })
+
+When('completes the process but leaves the information empty', (firstName, lastName, zipCode) =>{
+    cartPage.goToCheckout();
+    checkOutPage.validateCheckOutPage();
+    checkOutPage.fillForm("", "", "");
+    
+})
+
+Then('a warning message is displayed', () =>{
+    checkOutPage.validateEmptyForm();
+})

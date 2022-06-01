@@ -9,6 +9,7 @@ class CheckOutPage{
         this.zipCode = "#postal-code";
         this.continueButton = "#continue";
         this.cancelButton = "#cancel";
+        this.warningMessage = "//*[contains(text(), 'required')]";
     }
     
     validateCheckOutPage(){
@@ -21,6 +22,11 @@ class CheckOutPage{
         I.fillField(this.lastName, lastName);
         I.fillField(this.zipCode, zipCode);
         I.click(this.continueButton);
+    }
+
+    validateEmptyForm(){
+        I.waitForElement(this.warningMessage);
+        I.saveScreenshot("emptyWarning.png");
     }
 
 

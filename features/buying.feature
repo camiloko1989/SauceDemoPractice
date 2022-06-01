@@ -18,3 +18,8 @@ Scenario: Buy an item
     When the user adds the first item to the shopping cart
     And completes the process to buy the item
     Then the confirmation screen is displayed
+
+Scenario: Leave information blank
+    When the user adds the first item to the shopping cart
+    And completes the process but leaves the information empty
+    Then a warning message is displayed
