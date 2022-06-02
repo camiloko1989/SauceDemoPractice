@@ -23,3 +23,8 @@ Scenario: Leave information blank
     When the user adds the first item to the shopping cart
     And completes the process but leaves the information empty
     Then a warning message is displayed
+
+Scenario: Cancel a purchase of item
+    When the user adds the first item to the shopping cart
+    And completes the process to buy the item but cancels the purchase
+    Then the site goes back to the catalog

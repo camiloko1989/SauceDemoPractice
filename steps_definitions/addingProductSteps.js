@@ -64,3 +64,16 @@ When('completes the process but leaves the information empty', (firstName, lastN
 Then('a warning message is displayed', () =>{
     checkOutPage.validateEmptyForm();
 })
+
+When('completes the process to buy the item but cancels the purchase', () =>{
+    cartPage.goToCheckout();
+    checkOutPage.validateCheckOutPage();
+    checkOutPage.fillForm("Camilo", "Garcia", "111311");
+    checkOutTwoPage.validateCheckOutPageTwo();
+    checkOutTwoPage.cancelBuy();
+    
+})
+
+Then('the site goes back to the catalog', () =>{
+    loginPage.validateLoginSuccess();
+})

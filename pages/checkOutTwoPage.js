@@ -25,6 +25,11 @@ class CheckOutPageTwo{
         I.amOnPage("checkout-complete.html");
         I.waitForElement(this.successBuy);
    }
+
+   cancelBuy(){
+       I.waitForElement(this.cancelButton);
+       I.click(this.cancelButton);
+   }
 }
 
 module.exports = new CheckOutPageTwo();
